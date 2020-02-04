@@ -1,0 +1,26 @@
+            Hash Maps
+
+ - unordered associations between keys and values. May sound similar to a JavaScript object, simply because objects are jush hash maps, with some additional prototype cleverness thrown in.
+
+Key terms
+
+ - Hash map
+    - Hashing - the process of maping a key to its location or position in the has table., for example going to the meat section of a grocery store looking for meat, rather than roaming the whole store. Hashmap uses this concept for its data structure.
+
+    - Hash Table - storage that holds the records(the key and any value associated with the key). this is required in has maps. usually implemented internally using an array.
+
+    - Hash Function - A function that maps keys to positions in the has table. A good hash function attempts to distribute keys as evenly as possible among slots in the has table.
+
+ - Capacity
+    - grow in chunks as you resize to a larger array when hash table is full.
+
+ - Collisions
+    - main difficulty of has maps.
+    - happens when you want to hash a key at an index point that already has a key. 
+
+    - When a new entry hashes to a location in the hash table that is already occupied, it is said to collide with the existing entry. You can't just replace the 1st value, because then you'd be losing a key/value pair.
+
+    - 2 ways to resolve Collisions
+        + open addressing - when you have a collision you hash the key to the empty slot nearest to where it should live.
+        
+        + seperate chaining - using linked lists to hash the keys. When a key collides with another, we use the "next" pointers to put the keys in a linked list.
